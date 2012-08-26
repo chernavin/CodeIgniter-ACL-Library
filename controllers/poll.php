@@ -5,9 +5,9 @@
 class Poll extends MY_Controller {
 
 	// Question
-	private $question = 'What is ACL?';
+	private $_question = 'What is ACL?';
 	// Answer list
-	private $answer_list = array(
+	private $_answer_list = array(
 		1 => 'Access control list.',
 		'Access control layer.',
 		'Assert control list.'
@@ -43,8 +43,8 @@ class Poll extends MY_Controller {
 		else
 		{
 			$view_data = array(
-				'question' => $this->question,
-				'answer_list' => $this->answer_list
+				'question' => $this->_question,
+				'answer_list' => $this->_answer_list
 			);
 		}
 		
@@ -70,7 +70,7 @@ class Poll extends MY_Controller {
 		
 		if ($answer_id)
 		{
-			$msg = 'Your last answer was: <i>' . $this->answer_list[$answer_id] . '</i>';
+			$msg = 'Your last answer was: <i>' . $this->_answer_list[$answer_id] . '</i>';
 		}
 		else
 		{
